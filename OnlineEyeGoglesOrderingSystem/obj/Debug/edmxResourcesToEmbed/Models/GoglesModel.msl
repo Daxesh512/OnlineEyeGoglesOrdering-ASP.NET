@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataGoglesModelStoreContainer" CdmEntityContainer="DataGoglesEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="DataGoglesModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactTbls">
+      <EntityTypeMapping TypeName="DataGoglesModel.ContactTbl">
+        <MappingFragment StoreEntitySet="ContactTbl">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderTBs">
+      <EntityTypeMapping TypeName="DataGoglesModel.OrderTB">
+        <MappingFragment StoreEntitySet="OrderTB">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="giglesFrame" ColumnName="giglesFrame" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="discription" ColumnName="discription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsers">
+      <EntityTypeMapping TypeName="DataGoglesModel.TblUser">
+        <MappingFragment StoreEntitySet="TblUsers">
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

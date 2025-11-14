@@ -1,0 +1,75 @@
+﻿@model  OnlineEyeGoglesOrderingSystem.Models.OrderTB
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+
+<center>
+
+    <table style="width: 448px; height: 440px; background-color: #FF9933; font-size: large; font-weight: bold;">
+        <th colspan="2" align="center"><h1>Order Now</h1> </th>
+
+        @using (Html.BeginForm("Order", "User", FormMethod.Post))
+        {
+            <tr>
+                <td align="center">Person Name</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.name)</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Gender</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.gender)</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Gogles Frame</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.giglesFrame)</a>
+                    <p>Write : Ovel, Square,Diamond, Frame Less</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Mobile</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.mobile)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Email Id</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.email)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Quantity</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.quantity)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Discription</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.discription)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Confirm Order" class="btn-danger" name="Submit" />
+
+                </td>
+            </tr>
+        }
+        </table>
+        
+    </center>
+
+
+

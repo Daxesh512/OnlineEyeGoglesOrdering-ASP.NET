@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DataGoglesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\ONLINEEYEGOGLESORDERINGSYSTEM\ONLINEEYEGOGLESORDERINGSYSTEM\APP_DATA\DATAGOGLES.MDF.dbo.Admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="userName" />
+            <PropertyRef Name="pass" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="userName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\ONLINEEYEGOGLESORDERINGSYSTEM\ONLINEEYEGOGLESORDERINGSYSTEM\APP_DATA\DATAGOGLES.MDF.dbo.ContactTbl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ContactTbl">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subject" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="subject" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="message" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\ONLINEEYEGOGLESORDERINGSYSTEM\ONLINEEYEGOGLESORDERINGSYSTEM\APP_DATA\DATAGOGLES.MDF.dbo.OrderTB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OrderTB">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="giglesFrame" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="quantity" />
+            <PropertyRef Name="discription" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="giglesFrame" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="quantity" Type="int" Nullable="false" />
+          <Property Name="discription" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\ONLINEEYEGOGLESORDERINGSYSTEM\ONLINEEYEGOGLESORDERINGSYSTEM\APP_DATA\DATAGOGLES.MDF.dbo.TblUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TblUsers">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DataGoglesModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Admin].[userName] AS [userName], 
+[Admin].[pass] AS [pass], 
+[Admin].[email] AS [email]
+FROM [dbo].[Admin] AS [Admin]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ContactTbl" EntityType="Self.ContactTbl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[ContactTbl].[name] AS [name], 
+[ContactTbl].[email] AS [email], 
+[ContactTbl].[subject] AS [subject], 
+[ContactTbl].[message] AS [message]
+FROM [dbo].[ContactTbl] AS [ContactTbl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OrderTB" EntityType="Self.OrderTB" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[OrderTB].[name] AS [name], 
+[OrderTB].[gender] AS [gender], 
+[OrderTB].[giglesFrame] AS [giglesFrame], 
+[OrderTB].[mobile] AS [mobile], 
+[OrderTB].[email] AS [email], 
+[OrderTB].[quantity] AS [quantity], 
+[OrderTB].[discription] AS [discription]
+FROM [dbo].[OrderTB] AS [OrderTB]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TblUsers" EntityType="Self.TblUsers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TblUsers].[firstName] AS [firstName], 
+[TblUsers].[lastName] AS [lastName], 
+[TblUsers].[gender] AS [gender], 
+[TblUsers].[email] AS [email], 
+[TblUsers].[mobile] AS [mobile], 
+[TblUsers].[pass] AS [pass]
+FROM [dbo].[TblUsers] AS [TblUsers]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataGoglesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="userName" />
+            <PropertyRef Name="pass" />
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactTbl">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="subject" />
+            <PropertyRef Name="message" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subject" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="message" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderTB">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="giglesFrame" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="quantity" />
+            <PropertyRef Name="discription" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="giglesFrame" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="discription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DataGoglesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="ContactTbls" EntityType="Self.ContactTbl" />
+          <EntitySet Name="OrderTBs" EntityType="Self.OrderTB" />
+          <EntitySet Name="TblUsers" EntityType="Self.TblUser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataGoglesModelStoreContainer" CdmEntityContainer="DataGoglesEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="DataGoglesModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactTbls">
+            <EntityTypeMapping TypeName="DataGoglesModel.ContactTbl">
+              <MappingFragment StoreEntitySet="ContactTbl">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="message" ColumnName="message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderTBs">
+            <EntityTypeMapping TypeName="DataGoglesModel.OrderTB">
+              <MappingFragment StoreEntitySet="OrderTB">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="giglesFrame" ColumnName="giglesFrame" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="discription" ColumnName="discription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUsers">
+            <EntityTypeMapping TypeName="DataGoglesModel.TblUser">
+              <MappingFragment StoreEntitySet="TblUsers">
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

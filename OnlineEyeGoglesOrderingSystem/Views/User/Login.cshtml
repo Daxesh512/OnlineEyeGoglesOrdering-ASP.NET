@@ -1,0 +1,60 @@
+﻿@model  OnlineEyeGoglesOrderingSystem.Models.TblUser
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<center style="background-color: #000000">
+
+    @using (Html.BeginForm("Login", "User", FormMethod.Post))
+    {
+
+
+    <table style="width: 433px; height: 370px; background-color: #FF9933; font-size: large; font-weight: bold;">
+        <th colspan="2" align="center"><h1>Login Here</h1> </th>
+        <tr>
+            <td colspan="2" align="center" style="height: 42px">
+                
+                <select>
+                    <option>Select Operant</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Username</td>
+            <td align="center">
+                <a>@Html.TextBoxFor(m => m.email)</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="height: 72px" align="center">Password</td>
+            <td style="height: 72px" align="center">
+                <a>@Html.TextBoxFor(m => m.pass)</a>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td colspan="2" align="center">
+                <a><input type="Submit" value="Login" id="btnLogin" /></a>
+                
+            </td>
+        </tr>
+    </table>
+    }
+</center>
+
+
+
+
+
+
+
+
+

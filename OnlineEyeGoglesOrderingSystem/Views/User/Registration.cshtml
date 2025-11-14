@@ -1,0 +1,80 @@
+﻿@model  OnlineEyeGoglesOrderingSystem.Models.TblUser
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<center>
+    <center style="background-color: #000000">
+        
+        <table style="width: 448px; height: 440px; background-color: #FF9933; font-size: large; font-weight: bold;">
+            <th colspan="2" align="center"><h1>Register Now</h1> </th>
+
+            @using (Html.BeginForm("Registration", "User", FormMethod.Post))
+            {
+            <tr>
+                <td align="center">firstname</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.firstName)</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Lastname</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.lastName)</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Gender</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.gender)</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">Mobile</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.mobile)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Email Id</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.email)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Password</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.pass)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Confirm Password</td>
+                <td align="center">
+                    <a>@Html.TextBoxFor(m => m.pass)</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" class="btn-danger" name="Submit" />
+                 
+                </td>
+            </tr>
+            }
+       </table>
+            
+    </center>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataGoglesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="userName" />
+      <PropertyRef Name="pass" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactTbl">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="subject" />
+      <PropertyRef Name="message" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subject" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="message" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderTB">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="giglesFrame" />
+      <PropertyRef Name="mobile" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="quantity" />
+      <PropertyRef Name="discription" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="giglesFrame" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="discription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblUser">
+    <Key>
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="mobile" />
+      <PropertyRef Name="pass" />
+    </Key>
+    <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DataGoglesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="ContactTbls" EntityType="Self.ContactTbl" />
+    <EntitySet Name="OrderTBs" EntityType="Self.OrderTB" />
+    <EntitySet Name="TblUsers" EntityType="Self.TblUser" />
+  </EntityContainer>
+</Schema>
